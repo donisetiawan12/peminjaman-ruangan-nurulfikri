@@ -1,0 +1,22 @@
+mahasiswa : 
+
+folder mahasiswa/login.html....
+
+username "Mahasiswa"
+password "Mahasiswa"
+
+
+Dosen : 
+
+folder dosen/login.html...
+
+username "Dosen"
+password "Dosen"
+
+
+Admin : 
+
+folder admin/login.html...
+
+username "admin"
+password "admin"
