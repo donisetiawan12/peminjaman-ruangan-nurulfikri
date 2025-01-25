@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Peminjaman Ruangan | Pinjam Sekarang</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../assets/vendors/feather/feather.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/ti-icons/css/themify-icons.css"
+    />
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
+
+    <!--box icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- or -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/ti-icons/css/themify-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/js/select.dataTables.min.css"
+    />
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link
+      rel="stylesheet"
+      href="../assets/css/vertical-layout-light/style.css"
+    />
+    <!-- endinject -->
+    <link
+      rel="shortcut icon"
+      href="../assets/images/Desain_tanpa_judul__16_-removebg-preview.png"
+    />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div
+          class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center"
+        >
+          <a class="navbar-brand brand-logo mr-5" href="index.html"
+            ><img src="../assets/images/logo.png " class="mr-2" alt="logo"
+          /></a>
+          <a class="navbar-brand brand-logo-mini" href="index.html"
+            ><img src="../assets/images/logo-mini.png" alt="logo"
+          /></a>
+        </div>
+        <div
+          class="navbar-menu-wrapper d-flex align-items-center justify-content-end"
+        >
+          <button
+            class="navbar-toggler navbar-toggler align-self-center"
+            type="button"
+            data-toggle="minimize"
+          >
+            <span class="icon-menu"></span>
+          </button>
+          <ul class="navbar-nav mr-lg-2">
+            <li class="nav-item nav-search d-none d-lg-block">
+              <div class="input-group">
+                <div
+                  class="input-group-prepend hover-cursor"
+                  id="navbar-search-icon"
+                >
+                  <span class="input-group-text" id="search">
+                    <i class="icon-search"></i>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="navbar-search-input"
+                  placeholder="Search now"
+                  aria-label="search"
+                  aria-describedby="search"
+                />
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item dropdown"></li>
+            <li class="nav-item nav-profile dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-toggle="dropdown"
+                id="profileDropdown"
+              >
+                <img src="../assets/images/faces/face14.jpg" alt="profile" />
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                aria-labelledby="profileDropdown"
+              >
+                <a class="dropdown-item active">
+                  <i class="text-white bx bxs-user-rectangle"></i>
+                  Administrator
+                </a>
+                <a class="dropdown-item">
+                  <i class="ti-settings text-primary"></i>
+                  Profil
+                </a>
+                <a href="../UAs/index.html" class="dropdown-item">
+                  <i class="ti-power-off text-primary"></i>
+                   Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+          <button
+            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <hr style="width: 100%; border: 0.1px solid gray" />
+            <div class="sidebar-heading">PEMIN JAMAN</div>
+            <li class="nav-item active">
+              <a class="nav-link" href="pinjamansekarang.html">
+                <i class="menu-icon bx bx-calendar-check"></i>
+                <span class="menu-title">Pinjam Sekarang </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="peminjaman_saya.html">
+                <i class="menu-icon bx bx-user-check"></i>
+                <span class="menu-title">Peminjaman Saya </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-md-12 grid-margin">
+                <div class="row">
+                  <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                    <h6 class="font-weight-normal mb-0">
+                      Dashboard / <span class="text-gray">Tambah Pengguna</span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                  <div class="col-md-12 form-sample grid-margin">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-title text-center text-primary font-weight-bold">Auditorium</p>
+                        <hr style="width: 100%;">
+                        <br><br>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="form-group row">
+                                <div class="col">
+                                  <label>Nama Prodi / Organisasi <code>*</code></label>
+                                  <div id="the-basics">
+                                    <input class="typeahead" type="text" placeholder="Masukan Nama Prodi / Organisasi...">
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <label>Acara / Kegiatan <code>*</code></label>
+                                  <div id="bloodhound">
+                                    <input class="typeahead" type="text" placeholder="Masukan Acara / Kegiatan...">
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                  <label>Jumlah Peserta </label>
+                                  <div id="the-basics">
+                                    <input class="typeahead" type="number" placeholder="Masukan Jumlah Ruangan...">
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <label>Tanggal Pinjam <code>*</code></label>
+                                  <div id="bloodhound">
+                                    <input class="typeahead" type="date">
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                  <label>Waktu Mulai <code>*</code> </label>
+                                  <div id="the-basics">
+                                    <input class="typeahead" type="time">
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <label>Waktu Selesai <code>*</code></label>
+                                  <div id="bloodhound">
+                                    <input class="typeahead" type="time">
+                                  </div>
+                                </div>
+                                
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleTextarea1">Catatan <code>*</code></label>
+                                <textarea class="form-control" id="exampleTextarea1" rows="4" placeholder="Masukan Catatan Untuk Peminjaman..."></textarea>
+                              </div>
+                          
+                            <a href="peminjaman_saya.html" type="button" class="btn btn-primary btn-rounded btn-fw">Kirim</a>
+                            <a href="peminjaman_ruang.html" type="button" class="btn btn-secondary btn-rounded btn-fw">Batal</a>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="tambahpengguna"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Tambah Pengguna
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label>Edit Nama Ruangan <code>*</code></label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      placeholder="Auditorium"
+                      aria-label="nama prodi"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Edit Kapasitas <code>*</code></label>
+                    <input
+                      type="number"
+                      class="form-control form-control-sm col-lg-12"
+                      placeholder="100 Orang"
+                      aria-label="ketua prodi"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label> Edit Lokasi Ruangan <code>*</code> </label>
+                    <select class="form-control col-lg-12">
+                      <option>Gedung Kampus B2</option>
+                      <option>Gedung Kampus B2</option>
+                      <option>Gedung Kampus B1</option>
+                      <option>Gedung Kampus B3</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Edit Lantai Ruangan <code>*</code> </label>
+                    <select class="form-control col-lg-12">
+                      <option>Lantai 1</option>
+                      <option>Lantai 2</option>
+                      <option>Lantai 2</option>
+                      <option>Lantai 3</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleTextarea1"
+                      >Edit Deskripsi<code>*</code></label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="exampleTextarea1"
+                      rows="4"
+                      placeholder="Ruangan ini hanya dapat digunakan oleh prodi Teknik Informatika dan Sistem Informasi"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Edit Gambar Ruangan <code>*</code></label>
+                    <br />
+                    <img
+                      src="assets/images/ruangan/auditorium.jpg"
+                      class="img-modal"
+                      alt=""
+                    />
+                    <br /><br />
+                    <input type="file" class="form-control" />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Batal
+                  </button>
+                  <button type="button" class="btn btn-primary">Simpan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div
+              class="d-sm-flex justify-content-center justify-content-sm-between"
+            >
+              <span
+                class="text-muted text-center text-sm-left d-block d-sm-inline-block"
+                >Copyright © 2025. 
+                <a href="https://www.bootstrapdash.com/" target="_blank"
+                  >Doni | Hapiz | Fatih | Noval</a
+                >
+                Mahasiswa STT Nurul Fikri</span
+              >
+             
+            </div>
+          
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+
+    <!-- plugins:js -->
+
+    <script>
+      function hapus() {
+        alert("Apa Anda yakin ingin Hapus Data ini?");
+      }
+    </script>
+    <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="../assets/vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="../assets/js/dataTables.select.min.js"></script>
+
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../assets/js/off-canvas.js"></script>
+    <script src="../assets/js/hoverable-collapse.js"></script>
+    <script src="../assets/js/template.js"></script>
+    <script src="../assets/js/settings.js"></script>
+    <script src="../assets/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/Chart.roundedBarCharts.js"></script>
+    <script src="../assets/js/chart.js"></script>
+
+    <!-- End custom js for this page-->
+  </body>
+</html>

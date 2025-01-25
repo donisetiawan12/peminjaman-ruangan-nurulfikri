@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-learning.</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Gilda+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- slick slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- date picker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css" integrity="sha512-YdYyWQf8AS4WSB0WWdc3FbQ3Ypdm0QCWD2k4hgfqbQbRCJBEgX0iAegkl2S1Evma5ImaVXLBeUkIlP6hQ1eYKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../dist/main.css">
+     
+</head>
+<body>
+
+    <header class="bg-header-image bg-cover bg-center bg-no-repeat min-h-screen flex flex-col overflow-hidden">
+        <div class="header-top bg-eerie-black min-h-[48px] flex items-center font-barlow py-3">
+            <div class="container max-w-[1200px] max-auto lg:flex lg:justify-between">
+                <div class="headr-top-left flex flex-col items-center sm:flex-row sm:justify-center lg:justify-start">
+                    <div class="flex py-1">
+                        <i class="fa-solid fa-map w-[10px] mx-2" class="w-[10px] mx-2" style="color: #f7f7f7;"></i>
+                        <span class="text-platinum opacity-60 font-light text-sm mx-2">Jakarta, Indonesia</span>
+                    </div>
+                    <div class="flex py-1 md:ms-5 lg:ms-[72px]">
+                        <i class="fa-brands fa-whatsapp w-3 mx-2" style="color: #ffffff;"></i>
+                        <span class="text-platinum opacity-60 font-light text-sm ">+62 8473 3478 923</span>
+                    </div>
+                </div>
+                <ul class="flex items-center justify-center py-1">
+                    <li class="w-3 h-3 md:w-4 md:h-4 flex items-center justify-center mx-2">
+                        <a href="#" class="hover:opacity-80 transition ease-in-out duration-300">
+                            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                        </a>
+                    </li>
+                    <li class="w-3 h-3 md:w-4 md:h-4 flex items-center justify-center mx-2">
+                        <a href="#" class="hover:opacity-80 transition ease-in-out duration-300">
+                            <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+                        </a>
+                    </li>
+                    <li class="w-3 h-3 md:w-4 md:h-4 flex items-center justify-center mx-2">
+                        <a href="#" class="hover:opacity-80 transition ease-in-out duration-300">
+                            <i class="fa-brands fa-tiktok" style="color: #ffffff;"></i>
+                        </a>
+                    </li>
+                    <li class="font-medium uppercase text-white ms-2 text-xs  md:text-sm tracking-widest">follow us</li>
+                </ul>
+            </div>
+        </div>
+
+            <div class="header-main px-3 flex-1 flex">
+            <div class="container max-w-[1200px] mx-auto flex flex-col">
+                <nav class="py-5 md:flex md:justify-between">
+                    <div class="flex justify-between">
+                        <a href="#" class="font-gilda text-[28px] font-normal text-blue">E-<span class="text-oranye">learning.</span>
+                        </a>
+                        <button type="button" class="text-white md:hidden" id="navbar-show-btn">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+
+                    <div class="navbar-box fixed top-0 right-0 w-[280px] he-full bg-white p-5 flex flex-col items-center font-barlow-cond transition duration-300 ease-in-out md:relative md:translate-x-0 md:bg-transparent md:flex-row md:h-auto md:w-auto md:p-0 translate-x-full">
+                        <button type="button" class="absolute top-[18px] right-[18px] z-50 text-2xl hover:rotate-180 transition duration-300 ease-in-out md:hidden" id="navbar-hide-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+
+                        <ul class="flex flex-col w-full text-center mt-[60px] md:flex-row md:mt-0">
+                            <li class="py-3 border-b-[1px] border-solid md:py-0 md:border-none">
+                                <a href="#" class="text-eerie-black uppercase text-md tracking-[.12em] font-medium hover:text-lion transition duration-300 ease-in-out md:mx-[14px] xl:mx-5 2xl:mx-6 md:text-white">home</a>
+                            </li>
+                            <li class="py-3 border-b-[1px] border-solid md:py-0 md:border-none">
+                                <a href="#" class="text-eerie-black uppercase text-md tracking-[.12em] font-medium hover:text-lion transition duration-300 ease-in-out md:mx-[14px] xl:mx-5 2xl:mx-6 md:text-white">ruangan</a>
+                            </li>
+                            <li class="py-3 border-b-[1px] border-solid md:py-0 md:border-none">
+                                <a href="#" class="text-eerie-black uppercase text-md tracking-[.12em] font-medium hover:text-lion transition duration-300 ease-in-out md:mx-[14px] xl:mx-5 2xl:mx-6 md:text-white">events</a>
+                            </li>
+                            <li class="py-3 border-b-[1px] border-solid md:py-0 md:border-none">
+                                <a href="#" class="text-eerie-black uppercase text-md tracking-[.12em] font-medium hover:text-lion transition duration-300 ease-in-out md:mx-[14px] xl:mx-5 2xl:mx-6 md:text-white">galery</a>
+                            </li>
+                            <li class="py-3 border-b-[1px] border-solid md:py-0 md:border-none">
+                                <a href="#" class="text-eerie-black uppercase text-md tracking-[.12em] font-medium hover:text-lion transition duration-300 ease-in-out md:mx-[14px] xl:mx-5 2xl:mx-6 md:text-white">kontak </a>
+                            </li>
+                        </ul>
+
+                        <a href="../auth/login.html" class="w-full h-[42px] px-7 uppercase flex items-center justify-center bg-blue tracking-widest font-medium text-white mt-4 hover:bg-blue-dark md:mt-0 md:min-w-[140px] ms-6">booking</a>
+                    </div>
+                </nav>
+
+                <div class="flex-1 flex items-center justify-stretch flex-col text-center py-12">
+                    <h1 class="text-2xl xs:text-[32px] text-white font-gilda tracking-[.04em] leading-[1.6] uppercase font-normal max-w-[800px] md:text-[42px] xl:text-[50px] xl:leading-[1.3]">Pemijaman ruangan kelas kampus STT-NF </h1>
+
+                    <a href= "#" class= "min-w-[158px] min-h-[48px] bg-transparent uppercase text-white border-2  font-barlow tracking-widest text-base font-normal inline-flex items-center justify-center mt-9 md:mt-[60px] hover:bg-gilda hover:text-blue transition duration-300 ease-in-out">booking</a>
+
+                    <form class="font-barlow mt-16 bg-white w-full grid sm:grid-cols-2 lg:grid-cols-6">
+                        <div class="flex items-center justify-between px-3 py-4 border-[1px] border-solid">
+                            <input data-toggle = "datepicker" type="text" class="placeholder:text-eerie-black placeholder:uppercase text-sm outline-none border-none w-full " placeholder="check in">
+                            <span class="cursor-pointer">
+                                <i class="fa-regular fa-calendar-days fa-xs" style="color: #000000;"></i>
+                            </span>
+                        </div>
+                        <div class="flex items-center justify-between px-3 py-4 border-[1px] border-solid">
+                            <input data-toggle = "datepicker" type="text" class="placeholder:text-eerie-black placeholder:uppercase text-sm outline-none border-none w-full " placeholder="check out">
+                            <span class="cursor-pointer">
+                                <i class="fa-regular fa-calendar-days fa-xs" style="color: #000000;"></i>
+                            </span>
+                        </div>
+                        <div class="px-2 py-4 border-[1px]">
+                            <select class="min-w-full uppercase text-eerie-black outline-none">
+                                <option disabled selected>kampus</option>
+                                <option value="">A depok, jawa barat</option>
+                                <option value="">b jakarta, jawa barat</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+                        <div class="px-2 py-4 border-[1px]">
+                            <select class="min-w-full uppercase text-eerie-black outline-none">
+                                <option disabled selected>ruangan utama</option>
+                                <option value="">auditorium (b)</option>
+                                <option value="">aula</option>
+                                <option value="">parkiran</option>
+                            </select>
+                        </div>
+                        <div class="px-2 py-4 border-[1px]">
+                            <select class="min-w-full uppercase text-eerie-black outline-none">
+                                <option selected value="">1 ruangan</option>
+                                <option value="">2 ruangan</option>
+                                <option value="">3 ruangan</option>
+                                <option value="">4 ruangan</option>
+                            </select>
+                        </div>
+                        <button type="button" class="bg-blue font-barlow h-full min-h-[52px] flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-oranye">booking sekarang</button>
+                    </form>
+                </div> 
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-nero min-h-[640px] mx-auto px-3 flex items-center py-16">
+        <div class="container max-w-[1200px] mx-auto grid md:grid-cols-2 gap-14">
+            <div class="flex flex-col justify-center items-start">
+                <h3 class="text-coyote font-normal opacity-70 tracking-[.04em] font-barlow-cond text-xl sm:text-[22px] uppercase">Welcome To</h3>
+                <h1 class="font-gilda text-2xl sm:text-[38px] tracking-[.04em] font-normal py-3 text-white mb-3">Auditoriom & Meeting Rooms  </h1>
+                <p class="opacity-60 font-light font-barlow text-jutify text-base sm:text-lg text-white">Auditorium STT NF menyediakan ruang serbaguna dengan fasilitas modern untuk mendukung kegiatan akademik, pelatihan, seni, seminar, dan kolaborasi, memberikan manfaat bagi civitas akademika serta masyarakat luas.</p>
+                <a href="" class="bg-lion font-barlow px-4 min-w-[158px] min-h-[48px] inline-flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-lion-dark mt-8 tracking-widest">selengkapnya</a>
+            </div>
+
+            <div class="welcome-slider overflow-hidden">
+                <div class="h-[425px]">
+                    <img class="w-full h-full object-cover" src="../assets/imggg/unduhan.jpeg" alt="welcome image">
+                </div>
+                <div class="h-[425px]">
+                    <img class="w-full h-full object-cover" src="../assets/imggg/unduhan (1).jpeg" alt="welcome image">
+                </div>
+                <div class="h-[425px]">
+                    <img class="w-full h-full object-cover" src="../assets/imggg/OIP.jpeg" alt="welcome image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="min-h-[600px] py-16 flex flex-col items-center justify-center bg-banner-image bg-center bg-cover bg-fixed bg-no-repeat">
+        <div class="container max-w-[1200] mx-auto text-white text-center" >
+            <h2 class="font-gilda font-normal text-2xl sm:text-[38px] tracking-[.04em] mb-3">Welcome to Nurul Fikri's room rental!</h2>
+            <div class="flex items-center justify-center">
+                <!-- <img src="../assets/images/grstepi.png" alt=""> -->
+            </div>
+            <p class="mt-9 tracking-[.04em] text-lg sm:text-2xl font-light max-w-[600px] mx-auto leading-7 sm:leading-9">Aplikasi peminjaman ruangan ini adalah platform digital yang dirancang untuk memudahkan pengguna melihat jadwal ketersediaan ruang, memilih ruangan sesuai kebutuhan, dan mengajukan peminjaman secara praktis melalui perangkat seluler atau komputer.</p>
+            <a href="#" class="bg-blue font-barlow px-4 min-w-[158px] min-h-[48px] inline-flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-lion-dark mt-8 tracking-widest ">selengkapnya</a>
+        </div>
+    </section>
+
+    <section class="py-16- px-3 ">
+        <div class="container max-w-[1200px] mx-auto">
+            <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-coyote text-center mb-3 "></h2>
+            <div class="flex items-center justify-center">
+                <img src="../assets/images/booking.png" alt="">
+                <p ></p>
+            </div>
+            <div class="grid gap-10 md:grid-cols-2 py-10">
+                <p class="text-black opacity-60 font-light text-base sm:text-lg font-barlow first-letter:text-4xl first-letter:font-bold first-letter:tracking-[.03em]">Ruangan kampus STT Nurul Fikri memiliki berbagai fasilitas unggulan dan perlengkapan yang tersedia!</p>
+                <ul class="bg-lion py-5 sm:py-9 px-7">
+                    <li class="grid items-center grid-cols-[32px-auto] my-1"> <img src="" alt=""></li>
+                    <i class="fa-solid fa-book" style="color: #ffffff;"></i>
+                    <span class="text-white font-barlow text-base font-light">Kursi dan alat pembelajaran lain yang sudah lengkap dan nyaman.</span>
+                    <li class="grid items-center grid-cols-[32px-auto] my-1"> <img src="" alt=""></li>
+                    <i class="fa-solid fa-computer" style="color: #ffffff;"></i>
+                    <span class="text-white font-barlow text-base font-light">Proyektor berkualitas tinggi untuk menampilkan materi secara jelas.</span>
+                    <li class="grid items-center grid-cols-[32px-auto] my-1"> <img src="" alt=""></li>
+                    <i class="fa-solid fa-wifi" style="color: #ffffff;"></i>
+                    <span class="text-white font-barlow text-base font-light">Akses koneksi internet sudah tersedia dengan kecepatan koneksi yang stabil.</span>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-[4px]">
+            <!-- <a href="#" class="object-cover relative after:absolute after:content-[''] after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-b form-black/25 to-black/75 hover:bevore bevore:absolute bevore:content-[''] before:top-3 bevore:left-3 before:right-3 before:bottom-3 before:border-white before:border-2 before:border-solid before:z-10 before:opacity-0 hover:before:opacity-100 before:transition before:duration-300 before:ease-in-out">
+                <img src="../assets/images/pixelcut-export(1).jpeg" class="w-full h-full object-cover" alt="">
+                <div class="absolute bottom-0 left-2/4 translate-x-2/4 text-white font-medium uppercase text-2xl font-barlow z-10 mb-14 px-4 text-center w-full tracking-widest"></div>
+            </a>
+            <a href="#" class="object-cover relative after:absolute after:content-[''] after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-b form-black/25 to-black/75 hover:bevore bevore:absolute bevore:content-[''] before:top-3 bevore:left-3 before:right-3 before:bottom-3 before:border-white before:border-2 before:border-solid before:z-10 before:opacity-0 hover:before:opacity-100 before:transition before:duration-300 before:ease-in-out">
+                <img src="../assets/images/pixelcut-export.jpeg" class="w-full h-full object-cover" alt="">
+                <div class="absolute bottom-0 left-2/4 translate-x-2/4 text-white font-medium uppercase text-2xl font-barlow z-10 mb-14 px-4 text-center w-full tracking-widest"></div>
+            </a>
+            <a href="#" class="object-cover relative after:absolute after:content-[''] after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-b form-black/25 to-black/75 hover:bevore bevore:absolute bevore:content-[''] before:top-3 bevore:left-3 before:right-3 before:bottom-3 before:border-white before:border-2 before:border-solid before:z-10 before:opacity-0 hover:before:opacity-100 before:transition before:duration-300 before:ease-in-out">
+                <img src="../assets/images/balhio-3.png" class="w-full h-full object-cover" alt="">
+                <div class="absolute bottom-0 left-2/4 translate-x-2/4 text-white font-medium uppercase text-2xl font-barlow z-10 mb-14 px-4 text-center w-full tracking-widest"></div>
+            </a> -->
+        </div>
+    </section>
+
+    <section class="py-16 px-3 bg-booking-image bg-center bg-cover bg-no-repeat">
+        <div class="container max-w-[1200px] mx-auto">
+            <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-center text-white mb-3 ">booking form</h2>
+            <!-- <div class="flex items-center justify-center">
+                <img src="../assets/images/grstepi.png" alt="">
+            </div> -->
+
+            <form class="my-16 max-w-[824px] mx-auto">
+                <div class="my-13">
+                    <input type="text" class="outline-none py-4 px-5 bg-transparent caret-white text-white text-lg tracking-[.04em] font-light font-barlow placeholder:text-white border-white border-solid border-b-[1px] w-full" placeholder="full name">
+                </div>
+                <div class="grid md:grid-cols-2 md:my-3 md:gap-x-10">
+                    <input type="text" class="outline-none py-4 px-5 bg-transparent caret-white text-white text-lg tracking-[.04em] font-light font-barlow placeholder:text-white border-white border-solid border-b-[1px] w-full" placeholder="no telp">
+
+                    <input type="text" class="outline-none py-4 px-5 bg-transparent caret-white text-white text-lg tracking-[.04em] font-light font-barlow placeholder:text-white border-white border-solid border-b-[1px] w-full" placeholder="nama lengkap">
+                </div>
+
+                <div class="grid md:grid-cols-2 md:my-3 md:gap-x-10">
+                    <input type="text" class="outline-none py-4 px-5 bg-transparent caret-white text-white text-lg tracking-[.04em] font-light font-barlow placeholder:text-white border-white border-solid border-b-[1px] w-full" placeholder="tujuan booking">
+
+                    <select class="outline-none py-14 px-5 bg-transparent text-white text-lg tracking-[.04em] font-light border-solid border-b-[1px] w-full my-3">
+                        <option selected disabled > no. of adult</option>
+                        <option value="" class="bg-black/30">1</option>
+                        <option value="" class="bg-black/30">2</option>
+                        <option value="" class="bg-black/30">3</option>
+                    </select>
+                </div>
+
+                <div class="grid md:grid-cols-2 md:my-3 md:gap-x-10">
+                    <input type="date" class="outline-none py-4 px-5 bg-transparent caret-white text-white text-lg tracking-[.04em] font-light font-barlow placeholder:text-white border-white border-solid border-b-[1px] w-full my-3" >
+
+                    <input type="time" class="outline-none py-4 px-5 bg-transparent caret-white text-white text-lg tracking-[.04em] font-light font-barlow placeholder:text-white border-white border-solid border-b-[1px] w-full my-3">
+                </div>
+
+                <div class="flex items-center justify-center">
+                    <a href="#" class="bg-white font-barlow px-4 min-w-[158px] min-h-[48px] inline-flex items-center justify-center uppercase text-eerie-black transition duration-300 ease-in-out hover:bg-blue hover:text-white mt-8 tracking-widest">selengapnya</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="py-16 px-3 bg-white">
+        <div class="container max-w-[1200px] mx-auto">
+            <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-coyote text-center mb-3">Events</h2>
+            <div class="flex items-center justify-center">
+                <img src="../assets/images/grstpi/grs.png" alt="">
+            </div>
+            
+        </div>
+
+        <div class="grid gap-2 md:grid-cols-2 lg:grid-cols-3 mt-10">
+            <div class="min-h-[323px] relative">
+                <img src="../assets/images/events/event1.jpg" class="w-full h-full object-cover" alt="">
+                <div class="text-white absolute bottom-2 left-2 right-2 bg-black/50 p-5">
+                    <div class="w-[70px] h-[70px] bg-lion rounded-full flex items-center justify-center flex-col uppercase font-mont text-sm absolute top-0 right-3 -translate-y-[50%]">
+                        <span class="font-bold tracking-widest text-xl inline-block">03</span>
+                        <span class="tracking-widest inline-block -mt-[min-h-\[32px\]">APR</span>
+                    </div>
+                    <h3 class="font-gilda text-xl tracking-[.04em] uppercase"></h3>
+                    <p class="font-normal tracking-[.04em] font-barlow text-lg">Pameran hasil karya - <span class="font-light">10:00</span></p>
+                </div>
+            </div>
+            <div class="min-h-[323px] relative">
+                <img src="../assets/images/events/events2.jpg" class="w-full h-full object-cover" alt="">
+                <div class="text-white absolute bottom-2 left-2 right-2 bg-black/50 p-5">
+                    <div class="w-[70px] h-[70px] bg-lion rounded-full flex items-center justify-center flex-col uppercase font-mont text-sm absolute top-0 right-3 -translate-y-[50%]">
+                        <span class="font-bold tracking-widest text-xl inline-block">12</span>
+                        <span class="tracking-widest inline-block -mt-[min-h-\[32px\]">BSP</span>
+                    </div>
+                    <h3 class="font-gilda text-xl tracking-[.04em] uppercase"></h3>
+                    <p class="font-normal tracking-[.04em] font-barlow text-lg">Bincang Soal Pemira - <span class="font-light">09:00</span></p>
+                </div>
+            </div>
+            <div class="min-h-[323px] relative">
+                <img src="../assets/images/events/events4.jpg" class="w-full h-full object-cover" alt="">
+                <div class="text-white absolute bottom-2 left-2 right-2 bg-black/50 p-5">
+                    <div class="w-[70px] h-[70px] bg-lion rounded-full flex items-center justify-center flex-col uppercase font-mont text-sm absolute top-0 right-3 -translate-y-[50%]">
+                        <span class="font-bold tracking-widest text-xl inline-block">22</span>
+                        <span class="tracking-widest inline-block -mt-[min-h-\[32px\]">BSP</span>
+                    </div>
+                    <h3 class="font-gilda text-xl tracking-[.04em] uppercase"></h3>
+                    <p class="font-normal tracking-[.04em] font-barlow text-lg">Bincang soal pemira - <span class="font-light">10:00</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-3 bg-light-gray">
+        <div class="container max-w-[1200px] mx-auto">
+            <h2 class="font-gilda font-normal text-3xl text-[46px] tracking-[.04em] text-coyote text-center mb-3">Gallery</h2>
+            <div class="flex items-center justify-center">
+                <img src="../assets/images/grstpi/grs.png" alt="">
+            </div>
+
+            <div class="grid gap-3 sm:grid-cols-2 md:grid-cols-3 mt-10">
+                <div class="group min-h-[260px] relative after:absolute after:content-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-transparent-to-t after:from-black/75 after:to-black/5 after:opacity-0 hover:after:opacity-100 after:transition after:duration-300 after:ease-in-out overflow-hidden">
+                    <img src="../assets/images/gallery/g1.jpg" class="w-full h-full object-cover" alt="">
+                    <div class="bg-lion text-white py-2 px-4 flex items-center justify-between absolute bottom-3 left-0 z-10 -translate-x-full group-hover:translate-x-0 transition duration-300 ease-in-out w-4/5 ">
+                        <span class="font-barlow text-lg font-normal ">class rooms</span>
+                        <ul class="flex items-center">
+                            <li class="text-sm"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group min-h-[260px] relative after:absolute after:content-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-transparent-to-t after:from-black/75 after:to-black/5 after:opacity-0 hover:after:opacity-100 after:transition after:duration-300 after:ease-in-out overflow-hidden">
+                    <img src="../assets/images/gallery/g3.jpg" class="w-full h-full object-cover" alt="">
+                    <div class="bg-lion text-white py-2 px-4 flex items-center justify-between absolute bottom-3 left-0 z-10 -translate-x-full group-hover:translate-x-0 transition duration-300 ease-in-out w-4/5 ">
+                        <span class="font-barlow text-lg font-normal ">class rooms</span>
+                        <ul class="flex items-center">
+                            <li class="text-sm"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group min-h-[260px] relative after:absolute after:content-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-transparent-to-t after:from-black/75 after:to-black/5 after:opacity-0 hover:after:opacity-100 after:transition after:duration-300 after:ease-in-out overflow-hidden">
+                    <img src="../assets/images/gallery/g2.jpg" class="w-full h-full object-cover" alt="">
+                    <div class="bg-lion text-white py-2 px-4 flex items-center justify-between absolute bottom-3 left-0 z-10 -translate-x-full group-hover:translate-x-0 transition duration-300 ease-in-out w-4/5 ">
+                        <span class="font-barlow text-lg font-normal ">class rooms</span>
+                        <ul class="flex items-center">
+                            <li class="text-sm"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group min-h-[260px] relative after:absolute after:content-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-transparent-to-t after:from-black/75 after:to-black/5 after:opacity-0 hover:after:opacity-100 after:transition after:duration-300 after:ease-in-out overflow-hidden">
+                    <img src="../assets/images/gallery/g4.jpg" class="w-full h-full object-cover" alt="">
+                    <div class="bg-lion text-white py-2 px-4 flex items-center justify-between absolute bottom-3 left-0 z-10 -translate-x-full group-hover:translate-x-0 transition duration-300 ease-in-out w-4/5 ">
+                        <span class="font-barlow text-lg font-normal ">class rooms</span>
+                        <ul class="flex items-center">
+                            <li class="text-sm"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group min-h-[260px] relative after:absolute after:content-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-transparent-to-t after:from-black/75 after:to-black/5 after:opacity-0 hover:after:opacity-100 after:transition after:duration-300 after:ease-in-out overflow-hidden">
+                    <img src="../assets/images/gallery/g5.jpg" class="w-full h-full object-cover" alt="">
+                    <div class="bg-lion text-white py-2 px-4 flex items-center justify-between absolute bottom-3 left-0 z-10 -translate-x-full group-hover:translate-x-0 transition duration-300 ease-in-out w-4/5 ">
+                        <span class="font-barlow text-lg font-normal ">class rooms</span>
+                        <ul class="flex items-center">
+                            <li class="text-sm"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group min-h-[260px] relative after:absolute after:content-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-transparent-to-t after:from-black/75 after:to-black/5 after:opacity-0 hover:after:opacity-100 after:transition after:duration-300 after:ease-in-out overflow-hidden">
+                    <img src="../assets/images/gallery/g6.jpg" class="w-full h-full object-cover" alt="">
+                    <div class="bg-lion text-white py-2 px-4 flex items-center justify-between absolute bottom-3 left-0 z-10 -translate-x-full group-hover:translate-x-0 transition duration-300 ease-in-out w-4/5 ">
+                        <span class="font-barlow text-lg font-normal ">class rooms</span>
+                        <ul class="flex items-center">
+                            <li class="text-sm"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                            <li class="text-sm ms-1"<i class="fas fa-star"></i>></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-3 bg-banner-image bg-center bg-cover bg-fixed bg-no-repeat ">
+        <div class="container max-w-[1200px] mx-auto">
+            <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-coyote text-center mb-3"> FASILITAS RUANGAN</h2>
+            <div class="flex items-center justify-center ">
+                <img src="../assets/images/grstpi/grs.png" alt="">
+            </div>
+
+            <div class="grid gap-3 mt-10 sm:grid-cols-2 md:grid-cols-3">
+                <div class="flex text-center flex-col justify-center items-center bg-black/30 p-10 hover:bg-black/50 transition duration-300 ease-in-out">
+                    <img src="../assets/images/service/serv.png" class="w-[200px]" alt="">
+                    <h4 class="mt-4 mb-2 text-lion font-gilda text-xl tracking-[.04em] font-normal">Komputer</h4>
+                    <p class="text-white text-base font-barlow font-light tracking-[.04em]">Setiap komputer dilengkapi dengan spesifikasi modern, seperti prosesor cepat, memori besar, dan sistem operasi terbaru, sehingga cocok untuk tugas berat seperti pemrograman, desain grafis, atau analisis data.</p>
+                </div>
+                <div class="flex text-center flex-col justify-center items-center bg-black/30 p-10 hover:bg-black/50 transition duration-300 ease-in-out">
+                    <img src="../assets/images/service/buk.png" class="w-[200px]" alt="">
+                    <h4 class="mt-4 mb-2 text-lion font-gilda text-xl tracking-[.04em] font-normal">Book</h4>
+                    <p class="text-white text-base font-barlow font-light tracking-[.04em]">Dilengkapi dengan koleksi buku referensi terkini yang mencakup berbagai bidang ilmu.</p>
+                </div>
+                <div class="flex text-center flex-col justify-center items-center bg-black/30 p-10 hover:bg-black/50 transition duration-300 ease-in-out">
+                    <img src="../assets/images/service/wifi.png" class="w-[150px]" alt="">
+                    <h4 class="mt-4 mb-2 text-lion font-gilda text-xl tracking-[.04em] font-normal">Wifi</h4>
+                    <p class="text-white text-base font-barlow font-light tracking-[.04em]">Jaringan yang mencakup seluruh area ruangan, pengguna dapat bekerja secara efisien, baik untuk penelitian, diskusi kelompok, maupun presentasi.</p>
+                </div>
+                <div class="flex text-center flex-col justify-center items-center bg-black/30 p-10 hover:bg-black/50 transition duration-300 ease-in-out">
+                    <img src="../assets/images/service/tmptsmph.png" class="w-[150px]" alt="">
+                    <h4 class="mt-4 mb-2 text-lion font-gilda text-xl tracking-[.04em] font-normal">Tempat Sampah</h4>
+                    <p class="text-white text-base font-barlow font-light tracking-[.04em]">Tempat sampah diletakkan di lokasi strategis untuk memudahkan pembuangan sampah, baik organik maupun non-organik, dengan sistem pemisahan yang mendukung program daur ulang.</p>
+                </div>
+                <div class="flex text-center flex-col justify-center items-center bg-black/30 p-10 hover:bg-black/50 transition duration-300 ease-in-out">
+                    <img src="../assets/images/service/proyektor.png" class="w-[150px]" alt="">
+                    <h4 class="mt-4 mb-2 text-lion font-gilda text-xl tracking-[.04em] font-normal">Proyektor</h4>
+                    <p class="text-white text-base font-barlow font-light tracking-[.04em]">Dilengkapi dengan konektivitas modern seperti HDMI dan wireless casting, proyektor ini memudahkan pengguna untuk menghubungkan perangkat mereka dengan cepat.</p>
+                </div>
+                <div class="flex text-center flex-col justify-center items-center bg-black/30 p-10 hover:bg-black/50 transition duration-300 ease-in-out">
+                    <img src="../assets/images/service/ac.png" class="w-[150px]" alt="">
+                    <h4 class="mt-4 mb-2 text-lion font-gilda text-xl tracking-[.04em] font-normal">Ruangan Ac</h4>
+                    <p class="text-white text-base font-barlow font-light tracking-[.04em]">Dengan sistem pendingin udara yang modern, ruangan tetap sejuk dan nyaman, bahkan saat digunakan dalam waktu lama atau pada cuaca panas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-3 bg-nero">
+        <div class="container max-w-[1200px] mx-auto">
+            <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-center text-white mb-3">Blogs & News</h2>
+            <div class="flex items-center justify-center">
+                <img src="../assets/images/grstpi/grs.png" alt="">
+            </div>
+
+            <div class="grid mt-10 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-10" >
+                <a href="#" class="transition duration-300 ease-in-out hover:-translate-y-5">
+                    <div class="min-h-[400px]">
+                        <img src="../assets/images/events/p1.jpg" class="w-full h-full object-cover" alt="">
+                    </div>
+                    <div class="bg-white text-coyote text-center text-lg sm:text-xl font-gilda font-medium tracking-widest uppercase py-6 px-4 ">Ikuti acara kampus terbaru yang akan memberikan pengalaman berharga dan kesempatan untuk belajar langsung dari para ahli di bidangnya. Jangan lewatkan momen seru di setiap event yang kami selenggarakan!</div>
+                </a>
+                <a href="#" class="transition duration-300 ease-in-out hover:-translate-y-5">
+                    <div class="min-h-[400px]">
+                        <img src="../assets/images/events/p2.jpg" class="w-full h-full object-cover" alt="">
+                    </div>
+                    <div class="bg-white text-coyote text-center text-lg sm:text-xl font-gilda font-medium tracking-widest uppercase py-6 px-4 ">Bergabunglah dalam rangkaian event menarik yang diadakan oleh kampus kami! Dari seminar hingga workshop, setiap acara dirancang untuk memperkaya pengetahuan dan keterampilan Anda.</div>
+                </a>
+                <a href="#" class="transition duration-300 ease-in-out hover:-translate-y-5">
+                    <div class="min-h-[400px]">
+                        <img src="../assets/images/events/p3.jpg" class="w-full h-full object-cover" alt="">
+                    </div>
+                    <div class="bg-white text-coyote text-center text-lg sm:text-xl font-gilda font-medium tracking-widest uppercase py-6 px-4 ">Jelajahi berbagai acara menarik di kampus yang menawarkan kesempatan untuk berkembang, berkolaborasi, dan berinovasi bersama teman-teman serta dosen. Pastikan Anda tidak ketinggalan informasi terbaru mengenai event kami!</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31722.540165784685!2d106.79657471083983!3d-6.3529244999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec6b07b68ea5%3A0x17da46bdf9308386!2sSTT%20Terpadu%20Nurul%20Fikri%20-%20Kampus%20B!5e0!3m2!1sid!2sid!4v1737707146558!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="min-h-[480px] w-full"></iframe>
+    </section>
+
+    <footer>
+        <div class="bg-nero py-16 px-3">
+            <div class="grid max-w-[1200px] mx-auto gap-8 text-center md:grid-cols-2 md:text-start lg:grid-cols-footer">
+                <div class="md:me-2 lg:me-3">
+                    <a href="index.html" class="text-blue font-gilda font-normal text-2xl tracking-[.04em]">E- <span class="text-oranye">learning.</span> </a>
+                    <p class="text-white font-light font-barlow text-base mt-3 max-w-[480px] mx-auto md:ms-0">Auditorium STT NF menyediakan ruang serbaguna dengan fasilitas modern untuk mendukung kegiatan akademik, pelatihan, seni, seminar, dan kolaborasi, memberikan manfaat bagi civitas akademika serta masyarakat luas.</p>
+                </div>
+
+                <div>
+                    <h4 class="inline-block font-gilda tracking-[.04em] text-lg text-white capitalize relative after:absolute after:content-[''] after:left-0 after:-bottom-0 after:h-[1px] after:w-full after:bg-coyote pb-1 mb-4">Quick link</h4>
+                    <ul>
+                        <li class="my-2">
+                            <a href= "#" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out"> our service </a>
+                        </li>
+                        <li class="my-2">
+                            <a href= "#" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out"> book</a>
+                        </li>
+                        <li class="my-2">
+                            <a href= "#" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out"> about clas</a>
+                        </li>
+                        <li class="my-2">
+                            <a href= "#" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out"> blog </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="inline-block font-gilda tracking-[.04em] text-lg text-white capitalize relative after:absolute after:content-[''] after:left-0 after:-bottom-0 after:h-[1px] after:w-full after:bg-coyote pb-1 mb-4">Explore</h4>
+                    <ul>
+                        <li class="my-2">
+                            <a href= "#" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out"> class </a>
+                        </li>
+                        <li class="my-2">
+                            <a href= "#" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out"> lorem</a>
+                        </li>
+                        <li class="my-2">
+                            <a href= "#" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out"> lorem</a>
+                        </li>
+                        <li class="my-2">
+                            <a href= "#" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out"> lorem </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="inline-block font-gilda tracking-[.04em] text-lg text-white capitalize relative after:absolute after:content-[''] after:left-0 after:-bottom-0 after:h-[1px] after:w-full after:bg-coyote pb-1 mb-4">Contact</h4>
+                    <ul>
+                        <li class="my-2 grid grid-cols-[40px_auto] justify-center md:justify-start">
+                            <span class="text-white">
+                                <i class="fas fa-map-marker-alt" ></i>
+                            </span>
+                            <span class="text-white/50 font-light">jakarta, Indonesia</span>
+                        </li>
+                        <li class="my-2 grid grid-cols-[40px_auto] justify-center md:justify-start">
+                            <span class="text-white">
+                                <i class="fas fa-phone" ></i>
+                            </span>
+                            <span class="text-white/50 font-light">0217863191</span>
+                        </li>
+                        <li class="my-2 grid grid-cols-[40px_auto] justify-center md:justify-start">
+                            <span class="text-white">
+                                <i class="fas fa-envelope" ></i>
+                            </span>
+                            <span class="text-white/50 font-light">STT_NF</span>
+                        </li>
+                      
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="py-4 text-white font-normal font-barlow uppercase text-center tracking-widest bg-nero-dark">
+            <p class="text-sm">
+                &copy; copyright 2025 by geekthems.com
+            </p>
+        </div>
+    </footer>
+
+
+
+    
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+     <!-- date picker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js" integrity="sha512-RCgrAvvoLpP7KVgTkTctrUdv7C6t7Un3p1iaoPr1++3pybCyCsCZZN7QEHMZTcJTmcJ7jzexTO+eFpHk4OCFAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <!-- slick slide js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>   
+</body>
+</html>
